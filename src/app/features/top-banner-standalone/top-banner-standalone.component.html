@@ -1,0 +1,27 @@
+<div class="app-top-banner-standalone">
+    <p>app-top-banner-standalone works!</p>
+    <div class="swiper" [ngClass]="{'mobile': responsiveService.deviceMobile(), 
+    'web': responsiveService.deviceDesktop(), 'tablet': responsiveService.deviceTablet()}">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" *ngFor="let image of slides">
+            <img [ngSrc]=image width="500" height="500" class="slides-image"/>
+          </div>
+        </div>
+      
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+      
+        <!-- Add Navigation -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+    <!-- Screen: {{responsiveService.screenSize}} <br>
+    Device: {{responsiveService.deviceType}} <br>
+    Orientation: {{responsiveService.orientation}} <br> -->
+<!-- 
+    <br>
+
+    <div class="square" [ngClass]="{'mobile': responsiveService.deviceMobile(), 
+    'web': responsiveService.deviceDesktop(), 'tablet': responsiveService.deviceTablet()}"></div> -->
+</div>
+
